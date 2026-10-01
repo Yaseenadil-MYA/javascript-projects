@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #3b4cca 0%, #141b2e 100%);
+    color: #f7f8fb;
+    font-family: Inter, system-ui, sans-serif;
+}
+.page-shell{
+    width: min(100%, 520px);
+    padding: 20px;
+}
+.stopwatch{
+    position: relative;
+    width: 100%;
+    padding: 36px 34px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.92));
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+.stopwatch::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.2), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.14), transparent 28%);
+    pointer-events: none;
+}
+.stopwatch-header{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+.subtitle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.18);
+    color: #bfdbfe;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+}
+.stopwatch h1{
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #f8fafc;
+}
+.time-display{
+    position: relative;
+    z-index: 1;
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-align: center;
+    padding: 28px 0 12px;
+    color: #f8fafc;
+    text-shadow: 0 12px 30px rgba(15, 23, 42, 0.35);
+}
+.buttons{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 26px;
+}
+.btn{
+    min-width: 120px;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, var(--clr), rgba(255,255,255,0.15));
+    cursor: pointer;
+    transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.16);
+}
+.btn:hover{
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+}
+.btn:active{
+    transform: translateY(0);
+}
+@media (max-width: 460px) {
+    .stopwatch{
+        padding: 28px 22px;
+    }
+    .stopwatch-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .buttons{
+        gap: 10px;
+    }
+    .btn{
+        width: 100%;
+        min-width: 0;
+    }
+}

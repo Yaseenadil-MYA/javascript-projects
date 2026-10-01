@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do App</title>
+    <link rel="stylesheet" href="To do App.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header>
+            <h1 id="main-heder">To Do App</h1>
+            <p class="subtitle">Create, edit, and manage your tasks with a clean modern interface.</p>
+        </header>
+
+        <!-- thi is the main continer w -->
+    <div class="grid-continer controls">
+        <input type="text" id="Todo-input" placeholder="Enter todo here">
+        <input type="date" id="todo-date">
+        <button id="add-btn" onclick="addTodo();">Add</button>
+        <button id="cancel-btn" class="secondary-btn" onclick="cancelEdit();" hidden>Cancel</button>
+    </div>
+
+    <div class="todo-continer"></div>
+    </div>
+
+    <script src="To do App .js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+
+#start-btn{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: green;
+}
+#stop-btn{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: red;
+}
+#Rest-btn{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:blue
+}

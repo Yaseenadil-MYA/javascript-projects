@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(46, 44, 44, 0.938) 
+    
+}
+.card-bady{
+    background-color: rgb(224, 214, 194);
+    padding: 30px;
+    box-shadow: 2px 2px 5px rgb(227, 215, 215);
+    border-radius: 10px;
+}
+.card{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.card input{
+    height: 80px;
+    border: 0;
+    box-shadow: 0px 0px 5px lightgrey;
+    text-align: center;
+    font-size: 1.6em;
+}
+.card button{
+    border: 0px;
+    padding: 10px 15px;
+    background-color: rgb(42, 78, 197);
+    color: white;
+    font-size: 1.4em;
+    margin-top: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.card button:hover{
+    background-color:rgba(173, 84, 84, 0.986);
+}
+   
+    
+
+    

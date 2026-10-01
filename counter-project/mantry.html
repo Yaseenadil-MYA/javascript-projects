@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Counter</title>
+    <link rel="stylesheet" href="mantry.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="counter-card">
+            <div class="counter-header">
+                <h1>Shopping Bag Counter</h1>
+                <p class="subtitle">Track your items with a modern responsive interface.</p>
+            </div>
+
+            <div class="button-grid">
+                <button class="action-btn add-btn" onclick="updateCount(1)">Add to Bag</button>
+                <button class="action-btn sale-btn" onclick="updateCount(2)">Add 1+1 Sale</button>
+                <button class="action-btn wish-btn" onclick="updateCount(-1)">Move to Wish List</button>
+                <button class="action-btn reset-btn" onclick="resetCount()">Reset</button>
+            </div>
+
+            <div class="counter-status">
+                <span id="cart"></span>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let county = 0;
+
+        function renderCount() {
+            document.querySelector('#cart').innerText = `YOUR BAG has ${county} items`;
+        }
+
+        function updateCount(value) {
+            county = Math.max(0, county + value);
+            renderCount();
+        }
+
+        function resetCount() {
+            county = 0;
+            renderCount();
+        }
+
+        renderCount();
+    </script>
+</body>
+</html>

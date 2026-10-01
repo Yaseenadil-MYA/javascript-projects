@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Notes</title>
+    <link rel="stylesheet" href="note.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">Productive notes</p>
+                <h1>Smart Notes</h1>
+                <p class="subtitle">Save ideas, reminders, and quick notes with search, edit, and clear features.</p>
+            </div>
+            <div class="status-row">
+                <span id="noteCount">0 notes</span>
+                <button id="clearBtn" class="ghost-btn">Clear All</button>
+            </div>
+        </header>
+
+        <section class="panel">
+            <div class="panel-row">
+                <label class="field-label" for="title">Title</label>
+                <input type="text" id="title" placeholder="Enter note title" autocomplete="off">
+            </div>
+            <div class="panel-row">
+                <label class="field-label" for="text">Note</label>
+                <textarea id="text" rows="6" placeholder="Write your note..."></textarea>
+            </div>
+            <div class="panel-actions">
+                <button id="addBtn" class="primary-btn">Add Note</button>
+                <input type="search" id="search" placeholder="Search notes...">
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <div id="notes" class="notes-grid"></div>
+        </section>
+    </div>
+
+    <script src="note.js"></script>
+</body>
+</html>

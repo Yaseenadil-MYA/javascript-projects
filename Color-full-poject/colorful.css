@@ -1,0 +1,99 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    display: grid;
+    place-items: center;
+background-color: #000;
+    height: 100%;
+}
+.contener
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+.outre 
+{
+    position: relative;
+    margin: 0 50px;
+    background:#111
+}
+.button
+{
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+}
+.circal
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.outre button, .outre span
+{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.outre button{
+    background-color: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 9;
+}
+.button button{
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+}
+.circal button
+{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+.outre span{
+    height: 100%;
+    width:100%;
+    background: inherit;
+}
+ .button span{
+    border-radius: 50px;
+}
+ .circal span{
+    border-radius: 50%;
+}
+.outre span:nth-child(2){
+    filter: blur(14px);
+}
+.outre:hover{
+    animation: rotate 1.5s linear infinite;
+    background:
+    linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+
+
+}
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+    
+}
+
+    
